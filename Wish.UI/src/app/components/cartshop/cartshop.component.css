@@ -1,0 +1,33 @@
+.wrapper {
+  display: grid;
+}
+.main{
+  background-color: rgb(214, 207, 207);
+  width: 1920px;
+  min-height: 1080px;
+  padding: 100px;
+}
+.cartItem{
+  margin-bottom: 25px;
+  width: 1600px;
+  height: 300px;
+  padding: 50px;
+  border: 1px solid white;
+  display: inline-flex;
+}
+.cartInfoString{
+  margin-left: 150px;
+  font-size: 30px;
+  margin-top: 80px;
+}
+.borderradiuszero
+{
+  border-radius: 0px;
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  margin-top: 75px;
+  margin-left: 400px;
+  position: static;
+}

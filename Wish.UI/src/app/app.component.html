@@ -1,0 +1,60 @@
+<header>
+  <ul>
+      <li>
+          <a routerLink="/" class="logo">
+              Wish
+          </a>
+      </li>
+      <li>
+          <ul class="navItems">
+              <li><a routerLink="/catalog/1" [queryParams]= "{'pageNumber': 1, 'pageSize':10}">Rings</a></li>
+              <li><a routerLink="/catalog/2" [queryParams]= "{'pageNumber': 1, 'pageSize':10}">Earrings</a></li>
+              <li><a routerLink="/catalog/3" [queryParams]= "{'pageNumber': 1, 'pageSize':10}">Necklaces</a></li>
+              <li><a routerLink="/catalog/4" [queryParams]= "{'pageNumber': 1, 'pageSize':10}">Armlets</a></li>
+          </ul>
+      </li>
+      <li>
+          <input type="text" placeholder="Search">
+      </li>
+      <li class="meta">
+          <a routerLink="login">Sign In</a>
+          <a class="margin-left" routerLink="/register">Sign Up</a>
+          <a class="margin-left" routerLink="/cartshop" [queryParams]= "{'pageNumber': 1, 'pageSize':10}">Cart</a>
+      </li>
+  </ul>
+</header>
+
+<router-outlet></router-outlet>
+
+
+<footer>
+  <br>
+  <h1 class="title">
+      Wish
+  </h1>
+  <br>
+  <ul>
+    <li><a routerLink="/catalog/1" [queryParams]= "{'pageNumber': 1, 'pageSize':10}">Rings</a></li>
+    <li><a routerLink="/catalog/2" [queryParams]= "{'pageNumber': 1, 'pageSize':10}">Earrings</a></li>
+    <li><a routerLink="/catalog/3" [queryParams]= "{'pageNumber': 1, 'pageSize':10}">Necklaces</a></li>
+    <li><a routerLink="/catalog/4" [queryParams]= "{'pageNumber': 1, 'pageSize':10}">Armlets</a></li>
+  </ul>
+  <br>
+  <ul>
+      <li>
+          <div class="social instagram">
+              <a href="#" target="_blank"><i class="fa fa-github fa-1x"></i></a>
+          </div>
+      </li>
+      <li>
+          <div class="social vk">
+              <a href="#" target="_blank"><i class="fa fa-vk fa-1x"></i></a>
+          </div>
+      </li>
+      <li>
+          <div class="social telegram">
+              <a href="#" target="_blank"><i class="fa fa-paper-plane fa-1x"></i></a>
+          </div>
+      </li>
+  </ul>
+</footer>

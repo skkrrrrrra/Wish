@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <LangVersion>10</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="Extensions\**" />
+      <Compile Remove="Mappers\**" />
+      <EmbeddedResource Remove="Extensions\**" />
+      <EmbeddedResource Remove="Mappers\**" />
+      <None Remove="Extensions\**" />
+      <None Remove="Mappers\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="DamnSmallMapper" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" />
+        <PackageReference Include="Microsoft.AspNetCore.Http" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Wish.Domain\Wish.Domain.csproj" />
+      <ProjectReference Include="..\Wish.Persistence\Wish.Persistence.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Microsoft.AspNetCore.Http.Abstractions">
+        <HintPath>C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.6\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+</Project>

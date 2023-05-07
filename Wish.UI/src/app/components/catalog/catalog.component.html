@@ -1,0 +1,26 @@
+<div class="main">
+  <br>
+    <h1>{{this.title}}</h1>
+  <hr>
+  <div class="wrapper">
+    <div *ngFor="let prod of items">
+      <div>
+        <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <a href=""><img src="{{prod.pictureImage}}"></a>
+              </div>
+              <div class="loop-action">
+                <a class="add-to-cart">Быстрый просмотр</a>
+                <a class="loop-add-to-cart" (click)="addToCartshop(prod.id)">В корзину</a>
+              </div>
+            </div>
+              <div class="product-info">
+                <h3 class="product-title">{{prod.title}}</h3>
+                <div class="price">&#8381; {{prod.price}}</div>
+             </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

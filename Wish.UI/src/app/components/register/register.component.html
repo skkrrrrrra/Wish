@@ -1,0 +1,13 @@
+<div class="formBody">
+    <div class="signInForm">
+        <h3>Register</h3>
+        <form>
+            <input [(ngModel)]="user.fullname" name="fullname" class="borderradiuszero" type="text" placeholder="Your Full Name" />
+            <input [(ngModel)]="user.username" name="username" class="borderradiuszero" type="text" placeholder="Username" />
+            <input [(ngModel)]="user.email" name="email" class="borderradiuszero" type="email" placeholder="Email Address" />
+            <input [(ngModel)]="user.phoneNumber" name="phonenumber" class="borderradiuszero" type="tel" placeholder="Phone Number" />
+            <input [(ngModel)]="user.password" name="password" class="borderradiuszero" type="password" placeholder="Password" />
+            <button (click)="register(user)" class="borderradiuszero" type="submit">Подтвердить</button>
+        </form>
+    </div>
+</div>

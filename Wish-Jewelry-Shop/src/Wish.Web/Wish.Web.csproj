@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>86e8783b-87d8-4917-bbc3-c4dccff72c7d</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Swashbuckle.AspNetCore" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Wish.Application\Wish.Application.csproj" />
+      <ProjectReference Include="..\Wish.Domain\Wish.Domain.csproj" />
+      <ProjectReference Include="..\Wish.Persistence\Wish.Persistence.csproj" />
+    </ItemGroup>
+
+</Project>

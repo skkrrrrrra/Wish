@@ -1,0 +1,37 @@
+.formBody{
+  background-color: rgb(214, 207, 207);
+  width: 1920px;
+  height: 1080px;
+  position: fixed;
+}
+.signInForm{
+  margin-left: 600px;
+  margin-top: 350px;
+  padding: 15px;
+  width: 650px;
+  height: 350px;
+  border: 1px solid white;
+}
+.btn{
+  width: 200px;
+  height: 70px;
+}
+p{
+  margin-bottom: 25px;
+}
+form{
+  margin-left: -285px;
+  margin-top: 10px;
+}
+input{
+  margin-top: 19px;
+}
+h3{
+  font-size: 35px;
+  color: black;
+  margin-left: 240px;
+}
+.borderradiuszero
+{
+  border-radius: 0px;
+}

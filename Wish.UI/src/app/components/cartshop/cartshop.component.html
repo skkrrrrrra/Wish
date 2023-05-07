@@ -1,0 +1,21 @@
+<div class="main">
+  <h1>Корзина</h1>
+  <div class="wrapper">
+    <div *ngFor="let prod of items" class="cartItem">
+      <input type="hidden" id="{{prod.id}}">
+        <img src="{{prod.pictureImage}}" width="200" height="200" alt="">
+        <div class="cartItemTitle cartInfoString">
+            {{prod.title}}
+        </div>
+        <div class="cartItemPrice cartInfoString">
+            {{prod.price}}
+        </div>
+        <div class="cartItemPrice cartInfoString">
+            Count: {{prod.count}}
+        </div>
+        <div class="cartItemDelete">
+            <button class="borderradiuszero" (click)="deleteItem(prod.id)" type="submit">X</button>
+        </div>
+    </div>
+  </div>
+</div>

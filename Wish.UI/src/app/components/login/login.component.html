@@ -1,0 +1,10 @@
+<div class="formBody">
+  <div class="signInForm">
+      <h3>Sign In</h3>
+      <form>
+          <input [(ngModel)]="user.username" name="username" class="borderradiuszero" type="text" placeholder="Username" />
+          <input [(ngModel)]="user.password" name="password" class="borderradiuszero" type="password" placeholder="Password" />
+          <button (click)="login(user)" class="borderradiuszero" type="submit">Login</button>
+      </form>
+  </div>
+</div>
