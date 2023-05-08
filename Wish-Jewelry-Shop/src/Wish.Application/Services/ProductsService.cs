@@ -16,12 +16,12 @@ namespace Wish.Application.Services
 			_dbContext = context;
 		}
 
-		public async Task<Result<ProductResponse>> GetByIdAsync(long categoryId, long productId, CancellationToken cancellationToken)
+		public async Task<Result<ProductResponse>> GetByIdAsync(long productId, CancellationToken cancellationToken)
 		{
 			var product = await _dbContext.Products.AsNoTracking()
                 .Include(p => p.Attributes)
                 .Include(p => p.Material)
-                .FirstOrDefaultAsync(p => p.Id == productId && p.CategoryId == categoryId, cancellationToken);
+                .FirstOrDefaultAsync(p => p.Id == productId, cancellationToken);
 
 			if (product is null)
 				return new InvalidResult<ProductResponse>("Товара не существует");

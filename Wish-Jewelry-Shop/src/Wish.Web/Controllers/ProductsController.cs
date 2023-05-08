@@ -17,10 +17,10 @@ namespace Wish.Web.Controllers
 			_productService = productService;
 		}
 
-		[HttpGet("{categoryId}/{id}"), AllowAnonymous]
-		public async Task<Result<ProductResponse>> GetItem([FromRoute] long categoryId, [FromRoute] long id, CancellationToken cancellationToken)
+		[HttpGet("product/{id}"), AllowAnonymous]
+		public async Task<Result<ProductResponse>> GetItem([FromRoute] long id, CancellationToken cancellationToken)
 		{
-			var result = await _productService.GetByIdAsync(categoryId, id, cancellationToken);
+			var result = await _productService.GetByIdAsync(id, cancellationToken);
 			return result;
 		}
 

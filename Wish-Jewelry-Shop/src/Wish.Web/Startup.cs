@@ -96,8 +96,8 @@ public sealed class Startup
 		app.UseHttpsRedirection();
 		app.UseRouting();
         app.UseAuthentication();
-		
-		app.UseAuthorization();
+        app.UseCors("MyAllowedOrigins");
+        app.UseAuthorization();
         app.UseEndpoints(
 		endpoints =>
 		{
