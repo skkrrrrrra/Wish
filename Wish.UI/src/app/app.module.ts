@@ -21,6 +21,7 @@ const appRoutes: Routes = [
   {path: 'register', component:RegisterComponent},
   {path: 'catalog/:id', component:CatalogComponent},
   {path: 'cartshop', component:CartshopComponent},
+  {path: 'product/:id', component:ProductInfoComponent},
   {path: '**', component:NotFoundComponent},
 ]
 

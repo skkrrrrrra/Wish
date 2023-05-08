@@ -11,7 +11,7 @@
                 <a href=""><img src="{{prod.pictureImage}}"></a>
               </div>
               <div class="loop-action">
-                <a class="add-to-cart">Быстрый просмотр</a>
+                <a class="add-to-cart" routerLink="/product/{{this.prod.id}}">Быстрый просмотр</a>
                 <a class="loop-add-to-cart" (click)="addToCartshop(prod.id)">В корзину</a>
               </div>
             </div>

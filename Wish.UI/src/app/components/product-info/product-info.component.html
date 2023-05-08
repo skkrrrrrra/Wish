@@ -1,1 +1,43 @@
-<p>product-info works!</p>
+  <div class="main">
+    <div class="frame1">
+        <img class="productImage" src="{{item.pictureImage}}" alt="">
+    </div>
+
+    <div class="frame2">
+        <div class="productTitle">{{item.title}}</div>
+        <div class="productPrice">&#8381; {{item.price}}</div>
+        <div class="productDesc">{{item.description}}</div>
+        <div class="buttons">
+            <button class="addToCartButton">В корзину</button>
+        </div>
+        <div class="main2">
+            <div class="frame3">
+                <div class="productChar">Characteristics:</div>
+                <div class="productCharList">
+                    <div class="list">
+                        <ul>
+                          <p>
+                            <li>Weight: <div> {{item.weight}}</div></li>
+                          </p>
+                            <li>Material: <div> {{item.material.title}}</div></li>
+                            <br>
+                            <li>На складе: <div> {{item.count}}</div></li>
+                            <br>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="frame4">
+                <div class="productChar">Attributes:</div>
+                <div class="productCharList">
+                    <div class="list">
+                        <ul>
+                            <li *ngFor="let attr in item.attributes">{{attr.title}}: <div> {{attr.value}}</div></li>
+                            <br>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

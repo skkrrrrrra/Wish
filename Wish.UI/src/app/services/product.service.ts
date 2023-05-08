@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { ProductResponse } from '../models/Product/ProductResponse';
+import ProductDetailInfo from '../models/Product/ProductDetailInfo';
 
 
 
@@ -29,6 +30,12 @@ export class ProductService {
   {
     return this.http.post<any>(
       'https://localhost:7043/api/cartshop/add', productId
+    );
+  }
+  public getItemInfo(productId: number) : Observable<ProductDetailInfo>
+  {
+    return this.http.get<ProductDetailInfo>(
+      'https://localhost:7043/api/catalog/product/' + productId
     );
   }
 }
