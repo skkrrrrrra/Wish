@@ -12,17 +12,16 @@
         </div>
         <div class="main2">
             <div class="frame3">
-                <div class="productChar">Characteristics:</div>
+                <div class="productChar">Characteristics</div>
                 <div class="productCharList">
                     <div class="list">
                         <ul>
-                          <p>
-                            <li>Weight: <div> {{item.weight}}</div></li>
-                          </p>
-                            <li>Material: <div> {{item.material.title}}</div></li>
                             <br>
-                            <li>На складе: <div> {{item.count}}</div></li>
+                            <div>Weight: {{item.weight}}</div>
                             <br>
+                            <li>Material:{{item.material.title}}</li>
+                            <br>
+                            <li>На складе:{{item.count}}</li>
                         </ul>
                     </div>
                 </div>
@@ -32,7 +31,8 @@
                 <div class="productCharList">
                     <div class="list">
                         <ul>
-                            <li *ngFor="let attr in item.attributes">{{attr.title}}: <div> {{attr.value}}</div></li>
+                          <br>
+                            <li *ngFor="let attr of item.attributes">{{attr.title}}: {{attr.value}}</li>
                             <br>
                         </ul>
                     </div>
