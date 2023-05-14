@@ -18,7 +18,7 @@ export class ProductService {
   public getAllProducts(categoryId: number, pageNumber: number, pageSize: number) : Observable<ProductResponse>
   {
     return this.http.get<ProductResponse>(
-      'https://localhost:7043/api/catalog/'
+      'https://dev-wish.ru/api/catalog/'
       + categoryId
       + "?pageNumber="
       + pageNumber
@@ -29,7 +29,7 @@ export class ProductService {
   public addToCartshop(productId: number) : Observable<any>
   {
     return this.http.post<any>(
-      'https://localhost:7043/api/cartshop/add', productId,
+      'https://dev-wish.ru/api/cartshop/add', productId,
       {
         headers: {
           'Access-Control-Allow-Origin': '*',
@@ -40,7 +40,7 @@ export class ProductService {
   public getItemInfo(productId: number) : Observable<ProductDetailInfo>
   {
     return this.http.get<ProductDetailInfo>(
-      'https://localhost:7043/api/catalog/product/' + productId,
+      'https://dev-wish.ru/api/catalog/product/' + productId,
       {
         headers: {
           'Access-Control-Allow-Origin': '*',

@@ -16,6 +16,6 @@ export class SearchService {
   public SearchProducts(search:string) : Observable<ProductResponse>
   {
     return this.http.get<ProductResponse>(
-      'https://localhost:7043/api/search/' + search);
+      'https://dev-wish.ru/api/search/' + search);
   }
 }
