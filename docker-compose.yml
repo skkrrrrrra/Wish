@@ -21,6 +21,7 @@ services:
     restart: always 
   certbot:
     image: certbot/certbot:latest
+    command: certonly --webroot -w /var/www/certbot -d dev-wish.ru --non-interactive --agree-tos --register-unsafely-without-email --staging
     volumes:
       - ./certbot/www/:/var/www/certbot/:rw
       - ./certbot/conf/:/etc/letsencrypt/:rw
