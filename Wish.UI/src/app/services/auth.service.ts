@@ -5,6 +5,7 @@ import { UserRegisterRequest } from '../models/Auth/UserRegisterRequest';
 import { UserLoginRequest } from '../models/Auth/UserLoginRequest';
 import { UserRegisterResponse } from '../models/Auth/UserRegisterResponse';
 import { UserLoginResponse } from '../models/Auth/UserLoginResponse';
+import {from} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -29,7 +30,7 @@ export class AuthService {
     {
       headers: {
         'Access-Control-Allow-Origin': '*',
-      },
+      }
     });
   }
 }
