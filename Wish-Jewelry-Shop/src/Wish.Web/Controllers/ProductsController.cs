@@ -7,8 +7,7 @@ using Wish.Domain.Entities;
 namespace Wish.Web.Controllers
 {
 	[ApiController]
-	[Route("api/catalog")]
-	[Authorize]
+	[Route("api/catalog"), AllowAnonymous]
 	public class CatalogController : ControllerBase
 	{
 		private readonly IProductService _productService;

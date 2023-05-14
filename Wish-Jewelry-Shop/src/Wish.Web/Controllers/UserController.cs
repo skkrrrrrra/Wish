@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Wish.Application.Requests.Auth;
@@ -9,7 +10,7 @@ using Wish.Domain.Entities;
 namespace Wish.Web.Controllers
 {
 	[ApiController]
-	[Route("api/user")]
+	[Route("api/user"), Authorize]
 	public class UserController : ControllerBase
 	{
 		private readonly IUserService _userService;
@@ -19,7 +20,7 @@ namespace Wish.Web.Controllers
             _userService = userService;
 		}
 
-		[HttpGet]
+		[HttpGet, Authorize]
 		public async Task<Result<UserProfileResponse>> GetUserInfo(CancellationToken cancellationToken)
 		{
 			var result = await _userService.GetUserInfoAsync(cancellationToken);

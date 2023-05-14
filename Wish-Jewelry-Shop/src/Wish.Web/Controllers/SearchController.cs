@@ -21,8 +21,8 @@ namespace Wish.Web.Controllers
             _searchService = searchService;
 		}
 
-		[HttpPost, AllowAnonymous]
-		public async Task<Result<IEnumerable<ProductResponse>>> Register([FromBody] string s, CancellationToken cancellationToken)
+		[HttpGet("{s}"), AllowAnonymous]
+		public async Task<Result<IEnumerable<ProductResponse>>> Search([FromRoute] string s, CancellationToken cancellationToken)
 		{
 			var result = await _searchService.GetItemsWhatContains(s, cancellationToken);
 
