@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductResponse } from 'src/app/models/Product/ProductResponse';
 import { ProductService } from 'src/app/services/product.service';
 import { ActivatedRoute} from '@angular/router';
 import { Observable, Subscription, finalize, first, tap } from 'rxjs';
@@ -18,20 +17,21 @@ export class CatalogComponent implements OnInit {
   items: any;
   private routeSubscription: Subscription;
   private querySubscription: Subscription;
-  title: any;
+  title = '';
 
   ngOnInit(){
-    this.getPageTitle();
+    this.getPageTitle(this.id)
     this.getItems();
   }
   constructor(private route: ActivatedRoute, private productService:ProductService){
 
-      this.routeSubscription = route.params.subscribe(params=>{this.id=params['id'], this.getItems()
+      this.routeSubscription = route.params.subscribe(params=>{this.id=params['id'], this.getItems(), this.getPageTitle(this.id)
     });
       this.querySubscription = route.queryParams.subscribe(
           (queryParam: any) => {
               this.pageNumber = queryParam['pageNumber'];
               this.pageSize = queryParam['pageSize'];
+              this.getItems();
           },
       );
   }
@@ -46,22 +46,21 @@ export class CatalogComponent implements OnInit {
         finalize(() => this.isLoading$.next(false)),
       ).subscribe();
   }
-  getPageTitle()
+  getPageTitle(id:number)
   {
-    var titleId = this.id;
-    if(titleId === 1)
+    if(id == 1)
     {
       this.title = 'Кольца'
     }
-    if(titleId === 2)
+    if(id == 2)
     {
       this.title = 'Серьги'
     }
-    if(titleId === 3)
+    if(id == 3)
     {
       this.title = 'Ожерелья'
     }
-    if(titleId === 4)
+    if(id == 4)
     {
       this.title = 'Браслеты'
     }

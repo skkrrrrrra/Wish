@@ -1,13 +1,7 @@
 <div class="main">
   <br>
-    <h1>Категория: {{this.title}}</h1>
+    <h1>Показаны результаты по запросу "{{this.searchString}}"</h1>
   <hr>
-  <br>
-  <div class="pagination_section">
-    <a routerLink="/catalog/{{this.id}}" [queryParams]="{'pageNumber': 1,'pageSize': 10}">1</a>
-    <a routerLink="/catalog/{{this.id}}" [queryParams]="{'pageNumber': 2,'pageSize': 10}" >2</a>
-    <a routerLink="/catalog/{{this.id}}" [queryParams]="{'pageNumber': 3,'pageSize': 10}">3</a>
-  </div>
   <div class="wrapper">
     <div *ngFor="let prod of items">
       <div>

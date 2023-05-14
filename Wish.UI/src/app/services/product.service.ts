@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { ProductResponse } from '../models/Product/ProductResponse';
@@ -29,13 +29,22 @@ export class ProductService {
   public addToCartshop(productId: number) : Observable<any>
   {
     return this.http.post<any>(
-      'https://localhost:7043/api/cartshop/add', productId
-    );
+      'https://localhost:7043/api/cartshop/add', productId,
+      {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      });
   }
+
   public getItemInfo(productId: number) : Observable<ProductDetailInfo>
   {
     return this.http.get<ProductDetailInfo>(
-      'https://localhost:7043/api/catalog/product/' + productId
-    );
+      'https://localhost:7043/api/catalog/product/' + productId,
+      {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      });
   }
 }

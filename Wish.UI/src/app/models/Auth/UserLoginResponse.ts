@@ -1,23 +1,14 @@
 export class UserLoginResponse {
-  resultType = ''
+  resultType = 0
   errors = []
-  data: Data = {
+  data = {
     token: '',
-    userData:[]
+    userData: {
+      id: 0,
+      fullname: "",
+      role: "",
+      userName: "",
+      email: ""
+    }
   }
 }
-
-export interface Data {
-  token: string
-  userData: []
-}
-
-export interface UserData {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-  userName: string
-  email: string
-}
-

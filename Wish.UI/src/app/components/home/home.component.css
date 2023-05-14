@@ -6,11 +6,12 @@
   width: 1920px;
   height: 800px;
   overflow:hidden;
+  display: inline-flex;
   background-color: rgb(214, 207, 207);
 }
 .frame1{
   float:left;
-  width: 60%;
+  width: 55%;
   padding: 20px;
 }
 main {
@@ -27,7 +28,7 @@ p{
 }
 .frame2{
   float:left;
-  width: 40%;
+  width: 45%;
 }
 img{
   width: 100%;

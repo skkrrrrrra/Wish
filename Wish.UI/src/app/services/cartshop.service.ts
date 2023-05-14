@@ -20,13 +20,21 @@ export class CartshopService {
       + "?pageNumber="
       + pageNumber
       + "&pageSize="
-      + pageSize
-      );
+      + pageSize,
+      {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      });
   }
   public deleteFromCartshop(productId:number) : Observable<any>
   {
     return this.http.delete<any>(
-      'https://localhost:7043/api/cartshop/' + productId
-    );
+      'https://localhost:7043/api/cartshop/' + productId,
+      {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      });
   }
 }

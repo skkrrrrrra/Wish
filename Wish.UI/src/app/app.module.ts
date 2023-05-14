@@ -12,7 +12,8 @@ import { CartshopComponent } from './components/cartshop/cartshop.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { AuthIntercaptor } from './services/auth.interceptor';
+import { AuthInterceptor } from './services/auth.interceptor';
+import { SearchComponent } from './components/search/search.component';
 
 
 const appRoutes: Routes = [
@@ -22,6 +23,7 @@ const appRoutes: Routes = [
   {path: 'catalog/:id', component:CatalogComponent},
   {path: 'cartshop', component:CartshopComponent},
   {path: 'product/:id', component:ProductInfoComponent},
+  {path: 'search/:searchString', component:SearchComponent},
   {path: '**', component:NotFoundComponent},
 ]
 
@@ -36,6 +38,7 @@ const appRoutes: Routes = [
     ProductInfoComponent,
     CartshopComponent,
     NotFoundComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,7 @@ const appRoutes: Routes = [
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
-    useClass: AuthIntercaptor,
+    useClass: AuthInterceptor,
     multi: true,
   }
   ],

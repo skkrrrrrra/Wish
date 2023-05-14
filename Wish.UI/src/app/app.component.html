@@ -7,19 +7,20 @@
       </li>
       <li>
           <ul class="navItems">
-              <li><a routerLink="/catalog/1" [queryParams]= "{'pageNumber': 1, 'pageSize':10}">Rings</a></li>
-              <li><a routerLink="/catalog/2" [queryParams]= "{'pageNumber': 1, 'pageSize':10}">Earrings</a></li>
-              <li><a routerLink="/catalog/3" [queryParams]= "{'pageNumber': 1, 'pageSize':10}">Necklaces</a></li>
-              <li><a routerLink="/catalog/4" [queryParams]= "{'pageNumber': 1, 'pageSize':10}">Armlets</a></li>
+              <li><a routerLink="/catalog/1" [queryParams]="{'pageNumber': 1,'pageSize': 10}">Rings</a></li>
+              <li><a routerLink="/catalog/2" [queryParams]="{'pageNumber': 1,'pageSize': 10}">Earrings</a></li>
+              <li><a routerLink="/catalog/3" [queryParams]="{'pageNumber': 1,'pageSize': 10}">Necklaces</a></li>
+              <li><a routerLink="/catalog/4" [queryParams]="{'pageNumber': 1,'pageSize': 10}">Armlets</a></li>
           </ul>
       </li>
       <li>
-          <input type="text" placeholder="Search">
+          <input [(ngModel)]="searchString" name="searchString" value="{{this.searchString}}" type="text" placeholder="Search">
+          <button routerLink="search/{{this.searchString}}" class="searchButton">Search</button>
       </li>
       <li class="meta">
           <a routerLink="login">Sign In</a>
           <a class="margin-left" routerLink="/register">Sign Up</a>
-          <a class="margin-left" routerLink="/cartshop" [queryParams]= "{'pageNumber': 1, 'pageSize':10}">Cart</a>
+          <a class="margin-left" routerLink="/cartshop" [queryParams]="{'pageNumber':1,'pageSize':10}">Cart</a>
       </li>
   </ul>
 </header>
@@ -34,10 +35,10 @@
   </h1>
   <br>
   <ul>
-    <li><a routerLink="/catalog/1" [queryParams]= "{'pageNumber': 1, 'pageSize':10}">Rings</a></li>
-    <li><a routerLink="/catalog/2" [queryParams]= "{'pageNumber': 1, 'pageSize':10}">Earrings</a></li>
-    <li><a routerLink="/catalog/3" [queryParams]= "{'pageNumber': 1, 'pageSize':10}">Necklaces</a></li>
-    <li><a routerLink="/catalog/4" [queryParams]= "{'pageNumber': 1, 'pageSize':10}">Armlets</a></li>
+    <li><a routerLink="/catalog/1" [queryParams]="{'pageNumber':1,'pageSize':10}">Rings</a></li>
+    <li><a routerLink="/catalog/2" [queryParams]="{'pageNumber':1,'pageSize':10}">Earrings</a></li>
+    <li><a routerLink="/catalog/3" [queryParams]="{'pageNumber':1,'pageSize':10}">Necklaces</a></li>
+    <li><a routerLink="/catalog/4" [queryParams]="{'pageNumber':1,'pageSize':10}">Armlets</a></li>
   </ul>
   <br>
   <ul>

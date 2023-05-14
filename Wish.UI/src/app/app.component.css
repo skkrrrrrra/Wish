@@ -94,3 +94,12 @@ footer ul{
 footer li{
   margin-left: 25px;
 }
+i{
+  color: #8f8f8f;
+  margin-right: 20px;
+}
+.searchButton{
+  border-radius: 25px;
+  font-size: 20px;
+  margin-left: -70px;
+}

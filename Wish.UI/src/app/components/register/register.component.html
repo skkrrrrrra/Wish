@@ -2,6 +2,8 @@
     <div class="signInForm">
         <h3>Register</h3>
         <form>
+          <div [ngClass]="isSuccess ? 'successResult' : 'failedResult'">{{this.result}}</div>
+            <br>
             <input [(ngModel)]="user.fullname" name="fullname" class="borderradiuszero" type="text" placeholder="Your Full Name" />
             <input [(ngModel)]="user.username" name="username" class="borderradiuszero" type="text" placeholder="Username" />
             <input [(ngModel)]="user.email" name="email" class="borderradiuszero" type="email" placeholder="Email Address" />

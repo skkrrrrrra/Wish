@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+p{
+  font-size: 75px;
+  color: black;
+}
+.secondP{
+  margin-top: -900px;
+}
+.main{
+  position: static;
+  background-color: rgb(214, 207, 207);
+  min-width: 1920px;
+  min-height: 1080px;
+  max-width: 1920px;
+  max-height: 1080px;
+  text-align: center;
+  line-height: 980px;
+}
