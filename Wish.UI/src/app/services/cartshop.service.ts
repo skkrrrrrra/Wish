@@ -16,7 +16,7 @@ export class CartshopService {
   public getCartshopItems(pageNumber: number, pageSize: number) : Observable<ProductResponse>
   {
     return this.http.get<any>(
-      'https://dev-wish.ru/api/cartshop'
+      'https://localhost:7043/api/cartshop'
       + "?pageNumber="
       + pageNumber
       + "&pageSize="
@@ -30,7 +30,7 @@ export class CartshopService {
   public deleteFromCartshop(productId:number) : Observable<any>
   {
     return this.http.delete<any>(
-      'https://dev-wish.ru/api/cartshop/' + productId,
+      'https://localhost:7043/api/cartshop/' + productId,
       {
         headers: {
           'Access-Control-Allow-Origin': '*',

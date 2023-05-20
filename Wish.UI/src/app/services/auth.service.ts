@@ -17,7 +17,7 @@ export class AuthService {
   {
   }
   public register(user: UserRegisterRequest): Observable<UserRegisterResponse>{
-    return this.http.post<UserRegisterResponse>('https://dev-wish.ru/api/auth/register', user,
+    return this.http.post<UserRegisterResponse>('https://localhost:7043/api/auth/register', user,
     {
       headers: {
         'Access-Control-Allow-Origin': '*',
@@ -26,7 +26,7 @@ export class AuthService {
   }
 
   public login(user: UserLoginRequest): Observable<UserLoginResponse>{
-    return this.http.post<UserLoginResponse>('https://dev-wish.ru/api/auth/login', user,
+    return this.http.post<UserLoginResponse>('https://localhost:7043/api/auth/login', user,
     {
       headers: {
         'Access-Control-Allow-Origin': '*',
